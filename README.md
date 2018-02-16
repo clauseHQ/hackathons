@@ -1,7 +1,7 @@
 # Frequently Asked Questions
 
-1. What does your stuff do? Why would I use it?
-2. How do I integrate a smart legal contract with my stuff?
+1. What does Clause.io do? Why would I use it?
+2. How do I integrate a smart legal contract with my system?
 3. Do you have a sample I can look at and copy from?
 4. How can I create a smart legal contract from existing smart clauses?
 5. How do I create a new clause template?
