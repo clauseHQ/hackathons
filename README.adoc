@@ -1,6 +1,8 @@
 :toc:
 :toc-placement!:
 :imagesdir: ./images
+:source-highlighter: pygments
+:sourcedir: ./src
 
 = Hackathon Frequently Asked Questions
 
@@ -48,6 +50,18 @@ TDB
 Sample code block
 ....
 
+[source,ruby]
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+<1> Library import
+<2> URL mapping
+<3> HTTP response body
+
 == How can I create a Smart Legal Contract from existing Smart Clauses?
 
 TDB
@@ -70,4 +84,4 @@ Yes, Clause uses an API Gateway to rate-limit execution requests. For high-volum
 
 == What is the Clause pricing model?
 
-The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service pay-as-you-go pricing model.
+The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service, pay-as-you-go pricing model.
