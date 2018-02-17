@@ -1,6 +1,4 @@
-# Frequently Asked Questions
-
-## What does Clause do? Why would I use it?
+# What does Clause do? Why would I use it?
 
 Clause makes it easy for you to build parameterized legal contracts, parse them to extract machine-readable data, execute them as REST services, and connect them to external data sources.
 
@@ -12,13 +10,13 @@ You can watch an introductory video:
 
 [![Connected Contracting](https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
 
-## What is Accord Project?
+# What is Accord Project?
 
 [Accord Project](https://www.accordproject.org) is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the [Cicero project](https://github.com/accordproject/cicero).
 
 Clause Inc. technology is based on and extends the Accord Project Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
 
-## How do I integrate a Smart Legal Contract with my system?
+# How do I integrate a Smart Legal Contract with my system?
 
 Clause exposes the Smart Clauses in your contracts as a RESTful service, that accepts and produces JSON. Each Smart Clause in a contract is a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
 
@@ -28,20 +26,20 @@ Clause exposes the Smart Clauses in your contracts as a RESTful service, that ac
 
 We recommend you start with option (1) as there is nothing to install or manage. Simply create a Smart Legal Contract in Clause, and then click the _Connections_ tab to see the Execution URL.
 
-## Do you have sample code I can look at and copy from?
+# Do you have sample code I can look at and copy from?
 
-## How can I create a Smart Legal Contract from existing Smart Clauses?
+# How can I create a Smart Legal Contract from existing Smart Clauses?
 
-## How do I create a new Smart Clause Template?
+# How do I create a new Smart Clause Template?
 
-## How do I publish my Smart Clause Template so it shows up in Clause?
+# How do I publish my Smart Clause Template so it shows up in Clause?
 
-## How do I get access to Clause?
+# How do I get access to Clause?
 
-## Do you rate-limit execution requests?
+# Do you rate-limit execution requests?
 
 Yes, Clause uses an API Gateway to rate-limit execution requests. For high-volume/performance scenarios please contact us at support@clause.io.
 
-## What is the Clause pricing model?
+# What is the Clause pricing model?
 
 The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service pay-as-you-go pricing model.
