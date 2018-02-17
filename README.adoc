@@ -15,8 +15,7 @@ You can watch an introductory video:
 
 video::cmmq-JBMbbQ[youtube]
 
-link::https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
-image:http://clause.io/assets/images/heavier-rounded-white.png[link="http://www.apache.org/licenses/LICENSE-2.0"]
+image:https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg[link="http://www.youtube.com/watch?v=cmmq-JBMbbQ"]
 
 # What is Accord Project?
 
