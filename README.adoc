@@ -2,7 +2,6 @@
 :toc-placement!:
 :imagesdir: ./images
 :source-highlighter: pygments
-:sourcedir: ./src
 
 = Hackathon Frequently Asked Questions
 
@@ -50,22 +49,17 @@ TDB
 Sample code block
 ....
 
-[source,ruby]
-----
-require 'sinatra' // <1>
-
-get '/hi' do // <2>
-  "Hello World!" // <3>
-end
-----
-<1> Library import
-<2> URL mapping
-<3> HTTP response body
-
+.foo.js
 [source,javascript]
 ----
-include::{sourcedir}/test.js[]
+const foo = require('foo') // <1>
+
+const x = foo(2); // <2>
+console.log( 'Hello World!' + x); // <3>
 ----
+<1> Library import
+<2> Method call
+<3> Logging
 
 == How can I create a Smart Legal Contract from existing Smart Clauses?
 
