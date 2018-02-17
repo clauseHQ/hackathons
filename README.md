@@ -16,6 +16,10 @@ You can watch an introductory video:
 
 Clause Inc. technology is based on and extends the Accord Project Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
 
+# What is the Status of Clause?
+
+Clause is currently in closed beta. Don't worry, ff you are attending a Hackathon where we are present we will give you access!
+
 # How do I integrate a Smart Legal Contract with my system?
 
 Clause exposes the Smart Clauses in your contracts as a RESTful service, that accepts and produces JSON. Each Smart Clause in a contract is a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
@@ -35,6 +39,8 @@ We recommend you start with option (1) as there is nothing to install or manage.
 # How do I publish my Smart Clause Template so it shows up in Clause?
 
 # How do I get access to Clause?
+
+Please come talk to us at the Hackathon, or email support@clause.io.
 
 # Do you rate-limit execution requests?
 
