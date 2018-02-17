@@ -108,3 +108,20 @@ CAUTION: For high-volume/performance scenarios please contact us at support@clau
 == What is the Clause pricing model?
 
 The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service, pay-as-you-go pricing model.
+
+== What does this have to do with blockchain?
+
+Clause integrates with blockchains in a variety of ways, to fulfill different scenarios:
+
+. Contracts can be invoked from blockchains (passing data from the blockchain into the contract)
+. Contracts can submit transactions to blockchains
+. Contract execution can be embedded in a distributed blockchain node 
+. Contract logic can be compiled for execution on the blockchain
+
+(1) is illustrated by the https://github.com/accordproject/cicero-perishable-network[Cicero Perishable Goods Demo], which invokes an out-of-process Cicero Engine (or Clause) from https://hyperledger.github.io/composer/[Hyperledger Composer].
+
+(2) is possible using the Clause outbound web connector, which allows contracts to call external services, for example to the https://hyperledger.github.io/composer/integrating/getting-started-rest-api[Composer REST Server].
+
+(3) is possible for blockchains that support embedded Node.js execution and that can call the Cicero engine, for example https://jira.hyperledger.org/browse/FAB-2331[Hyperledger Fabric v1.1].
+
+(4) is currently under development.
