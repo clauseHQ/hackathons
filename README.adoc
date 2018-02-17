@@ -1,6 +1,7 @@
-:toc: macro
-:toc-title:
-:toclevels: 9
+:toc:
+:toc-placement!:
+
+toc::[]
 
 # What does Clause do? Why would I use it?
 
@@ -12,7 +13,7 @@ The Clause platform is completely generic and can be used to automate the contra
 
 You can watch an introductory video:
 
-[![Connected Contracting](https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
+video::cmmq-JBMbbQ[youtube]
 
 # What is Accord Project?
 
