@@ -1,58 +1,73 @@
 :toc:
 :toc-placement!:
+:imagesdir: ./images
+
+= Hackathon Frequently Asked Questions
 
 toc::[]
 
-# What does Clause do? Why would I use it?
+== What does Clause do? Why would I use it?
 
 Clause makes it easy for you to build parameterized legal contracts, parse them to extract machine-readable data, execute them as REST services, and connect them to external data sources.
 
-For example, you may have a Service Level Contract that specifies a percentage reduction in a customer's monthly bill, based on the availability of a service. The parameters for the contract are defined in a _smart clause template_ and Clause can be used to automatically generate invoices (or move money!) based on IT monitoring events.
+For example, you may have a Service Level Contract that specifies a percentage reduction in a customer's monthly bill, based on the availability of a service. The parameters for the contract are defined in a _Smart Clause Template_ and Clause can be used to automatically generate invoices (or move money!) based on IT monitoring events.
 
-The Clause platform is completely generic and can be used to automate the contractual logic behind any business relationship.
+Clause is completely generic however and can be used to automate the contractual logic behind any business relationship.
 
-You can watch an introductory video:
-
-video::cmmq-JBMbbQ[youtube]
+=== Introductory video
 
 image:https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg[link="http://www.youtube.com/watch?v=cmmq-JBMbbQ"]
 
-# What is Accord Project?
+== What is Accord Project?
 
-[Accord Project](https://www.accordproject.org) is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the [Cicero project](https://github.com/accordproject/cicero).
+https://www.accordproject.org[Accord Project] is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the https://github.com/accordproject/cicero[Cicero project].
 
-Clause Inc. technology is based on and extends the Accord Project Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
+Clause Inc. technology is based on and extends the Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
 
-# What is the Status of Clause?
+== What is the status of Clause?
 
-Clause is currently in closed beta. Don't worry, ff you are attending a Hackathon where we are present we will give you access!
+Clause is currently in closed beta. Don't worry, if you are attending a Hackathon where we are present we will give you access!
 
-# How do I integrate a Smart Legal Contract with my system?
+== How do I integrate a Smart Legal Contract with my system?
 
 Clause exposes the Smart Clauses in your contracts as a RESTful service, that accepts and produces JSON. Each Smart Clause in a contract is a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
 
-1. Call a Clause RESTful service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
-2. Run a [Cicero Server](https://github.com/accordproject/cicero/tree/master/packages/cicero-server) locally (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
-3. Use the [Cicero Engine](https://github.com/accordproject/cicero/tree/master/packages/cicero-engine) npm module, and embed execution into you Node.js application (most flexible, but template and clause management must be performed by the application)
+. Call a Clause RESTful service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
+. Run a https://github.com/accordproject/cicero/tree/master/packages/cicero-server[Cicero Server] (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
+. Use the https://github.com/accordproject/cicero/tree/master/packages/cicero-engine[Cicero Engine] npm module, and embed execution into you Node.js application (most flexible, but template and clause management must be performed by the application)
 
 We recommend you start with option (1) as there is nothing to install or manage. Simply create a Smart Legal Contract in Clause, and then click the _Connections_ tab to see the Execution URL.
 
-# Do you have sample code I can look at and copy from?
+image::clause-connections.png[Smart Clause Connections]
 
-# How can I create a Smart Legal Contract from existing Smart Clauses?
+== Do you have sample code I can look at and copy from?
 
-# How do I create a new Smart Clause Template?
+TDB
 
-# How do I publish my Smart Clause Template so it shows up in Clause?
+....
+Sample code block
+....
 
-# How do I get access to Clause?
+== How can I create a Smart Legal Contract from existing Smart Clauses?
+
+TDB
+
+== How do I create a new Smart Clause Template?
+
+TDB
+
+== How do I publish my Smart Clause Template so it shows up in Clause?
+
+TDB
+
+== How do I get access to Clause?
 
 Please come talk to us at the Hackathon, or email support@clause.io.
 
-# Do you rate-limit execution requests?
+== Do you rate-limit execution requests?
 
 Yes, Clause uses an API Gateway to rate-limit execution requests. For high-volume/performance scenarios please contact us at support@clause.io.
 
-# What is the Clause pricing model?
+== What is the Clause pricing model?
 
 The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service pay-as-you-go pricing model.
