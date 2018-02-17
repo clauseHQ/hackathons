@@ -1,3 +1,7 @@
+:toc: macro
+:toc-title:
+:toclevels: 9
+
 # What does Clause do? Why would I use it?
 
 Clause makes it easy for you to build parameterized legal contracts, parse them to extract machine-readable data, execute them as REST services, and connect them to external data sources.
