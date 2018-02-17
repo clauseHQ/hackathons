@@ -10,7 +10,11 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
+image::logo.png[Clause Logo]
+
 = Hackathon Frequently Asked Questions
+
+Welcome to the hackathon! http://clause.io[Clause] is here to help you have a great experience, build something amazing, learn and grow!
 
 toc::[]
 
@@ -20,7 +24,7 @@ Clause makes it easy for you to build parameterized legal contracts, parse them 
 
 For example, you may have a Service Level Contract that specifies a percentage reduction in a customer's monthly bill, based on the availability of a service. The parameters for the contract are defined in a _Smart Clause Template_ and Clause can be used to automatically generate invoices (or move money!) based on IT monitoring events.
 
-Clause is completely generic however and can be used to automate the contractual logic behind any business relationship.
+TIP: Clause is completely generic and can be used to automate the contractual logic behind any business relationship. It makes it easy for you to map from natural language text to executable code.
 
 === Introductory video
 
@@ -30,15 +34,22 @@ image:https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg[link="http://www.youtube.com/
 
 https://www.accordproject.org[Accord Project] is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the https://github.com/accordproject/cicero[Cicero project].
 
+TIP: Accord Project Cicero is licensed under the Apache-2 license making it easy to integrate with and use within your company.
+
+If you would like to get involved with either the legal or technical side of the Accord Project please visit the http://accordproject.org[website] and sign up! Everyone is welcome and can contribute: ideas, documentation, testing, code, legal templates, models, translations, etc.
+
+[NOTE]
+====
 Clause Inc. technology is based on and extends the Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
+====
 
 == What is the status of Clause?
 
-Clause is currently in closed beta. Don't worry, if you are attending a Hackathon where we are present we will give you access!
+Clause is currently in closed beta (open to our friends and supporters). Don't worry, if you are attending a Hackathon where we are present we will give you access!
 
 == How do I integrate a Smart Legal Contract with my system?
 
-Clause exposes the Smart Clauses in your contracts as a RESTful service, that accepts and produces JSON. Each Smart Clause in a contract is a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
+Clause exposes the Smart Clauses in contracts as RESTful services, that accept and produce JSON formatted data. Each Smart Clause in a Smart Legal Contract acts as a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
 
 . Call a Clause RESTful service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
 . Run a https://github.com/accordproject/cicero/tree/master/packages/cicero-server[Cicero Server] (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
@@ -74,11 +85,15 @@ TDB
 
 == How do I create a new Smart Clause Template?
 
-TDB
+Creating a new Smart Clause Template essentially involves creating a directory structure with some files that conform to the Accord Project Template Specification.
+
+Cicero includes some command-line tools and examples to make creating Smart Clause Templates easier.
+
+If you would like to create your own Smart Clause Template please refer to the Cicero documentation https://github.com/accordproject/cicero/blob/master/README.md[here].
 
 == How do I publish my Smart Clause Template so it shows up in Clause?
 
-TDB
+Smart Clause Templates in Clause are managed in Template Libraries. By default Clause displays the templates in the Open Source Accord Project https://github.com/accordproject/cicero-template-library[template library], and the Clause template library. In addition you can add your own private template library to your organization using the Clause user interface.
 
 == How do I get access to Clause?
 
@@ -86,24 +101,10 @@ Please come talk to us at the Hackathon, or email support@clause.io.
 
 == Do you rate-limit execution requests?
 
-Yes, Clause uses an API Gateway to rate-limit execution requests. For high-volume/performance scenarios please contact us at support@clause.io.
+Yes, Clause uses an API Gateway to rate-limit execution requests. 
+
+CAUTION: For high-volume/performance scenarios please contact us at support@clause.io.
 
 == What is the Clause pricing model?
 
 The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service, pay-as-you-go pricing model.
-
-[NOTE]
-====
-A sample note admonition.
-We can use gemoji icons in the Asciidoctor markup.
-We assign an icon name to the document
-attributes `tip-caption`, `note-caption` and `important-caption`.
-====
-
-TIP: It works!
-
-IMPORTANT: Asciidoctor is awesome, don't forget!
-
-CAUTION: Don't forget to add the `...-caption` document attributes in the header of the document on GitHub.
-
-WARNING: You have no reason not to use Asciidoctor.
