@@ -15,6 +15,9 @@ You can watch an introductory video:
 
 video::cmmq-JBMbbQ[youtube]
 
+link::https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
+image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[link="http://www.apache.org/licenses/LICENSE-2.0"]
+
 # What is Accord Project?
 
 [Accord Project](https://www.accordproject.org) is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the [Cicero project](https://github.com/accordproject/cicero).
