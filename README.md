@@ -8,22 +8,36 @@ For example, you may have a Service Level Contract that specifies a percentage r
 
 The Clause platform is completely generic and can be used to automate the contractual logic behind any business relationship.
 
-You can watch an introduction video:
+You can watch an introductory video:
 
 [![Connected Contracting](https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
 
-## How do I integrate a smart legal contract with my system?
+## What is Accord Project?
 
-## Do you have a sample I can look at and copy from?
+[Accord Project](https://www.accordproject.org) is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the [Cicero project](https://github.com/accordproject/cicero).
 
-## How can I create a smart legal contract from existing smart clauses?
+Clause Inc. technology is based on and extends the Accord Project Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
 
-## How do I create a new clause template?
+## How do I integrate a Smart Legal Contract with my system?
 
-## How do I publish my template so it shows up in Clause Hub?
+Clause exposes the Smart Clauses in your contracts as a RESTful service, that accepts and produces JSON. Each Smart Clause in a contract is a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
 
-## How do I get access to Clause Hub?
+1. Call a Clause RESTful service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
+2. Run a [Cicero Server](https://github.com/accordproject/cicero/tree/master/packages/cicero-server) locally (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
+3. Use the [Cicero Engine](https://github.com/accordproject/cicero/tree/master/packages/cicero-engine) npm module, and embed execution into you Node.js application (most flexible, but template and clause management must be performed by the application)
 
-## Do you rate-limit requests?
+We recommend you start with option (1) as there is nothing to install or manage. Simply create a Smart Legal Contract in Clause, and then click the _Connections_ tab to see the Execution URL.
 
-## What is your pricing model?
+## Do you have sample code I can look at and copy from?
+
+## How can I create a Smart Legal Contract from existing Smart Clauses?
+
+## How do I create a new Smart Clause Template?
+
+## How do I publish my Smart Clause Template so it shows up in Clause?
+
+## How do I get access to Clause?
+
+## Do you rate-limit execution requests?
+
+## What is the Clause pricing model?
