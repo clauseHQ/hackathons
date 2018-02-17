@@ -95,6 +95,13 @@ If you would like to create your own Smart Clause Template please refer to the C
 
 Smart Clause Templates in Clause are managed in Template Libraries. By default Clause displays the templates in the Open Source Accord Project https://github.com/accordproject/cicero-template-library[template library], and the Clause template library. In addition you can add your own private template library to your organization using the Clause user interface.
 
+You are encouraged to fork the https://github.com/clauseHQ/sample-private-template-library[sample template library] as the basis for your own template library. You can then add your repository to your Clause account from the template page.
+
+[NOTE]
+====
+The https://github.com/clauseHQ/sample-private-template-library[sample template library] includes further detail on how to configure your template library to make sure that it will appear in Clause.
+====
+
 == How do I get access to Clause?
 
 Please come talk to us at the Hackathon, or email support@clause.io.
