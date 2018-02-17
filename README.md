@@ -10,7 +10,7 @@ The Clause platform is completely generic and can be used to automate the contra
 
 You can watch an introduction video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cmmq-JBMbbQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Connected Contracting](https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg)](http://www.youtube.com/watch?v=cmmq-JBMbbQ)
 
 ## How do I integrate a smart legal contract with my system?
 
