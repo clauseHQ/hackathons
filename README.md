@@ -40,4 +40,8 @@ We recommend you start with option (1) as there is nothing to install or manage.
 
 ## Do you rate-limit execution requests?
 
+Yes, Clause uses an API Gateway to rate-limit execution requests. For high-volume/performance scenarios please contact us at support@clause.io.
+
 ## What is the Clause pricing model?
+
+The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service pay-as-you-go pricing model.
