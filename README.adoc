@@ -134,3 +134,15 @@ Clause integrates with blockchains in a variety of ways, to fulfill different sc
 (3) is possible for blockchains that support embedded Node.js execution and that can call the Cicero engine, for example https://jira.hyperledger.org/browse/FAB-2331[Hyperledger Fabric v1.1].
 
 (4) is currently under development.
+
+== What connectors do you support
+
+We are adding connectors at a rapid rate, so this list is not exhaustive! Here is a flavour of the types of things you can do from your Smart Legal Contracts:
+
+* Execute Smart Clauses via authenticated REST services
+* POST data to external REST services (web hooks)
+* Transfer Ether between Ethereum accounts
+* Invoke Zapier
+* Invoke Xero accounting
+
+
