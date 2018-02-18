@@ -2,6 +2,9 @@
 :toc-placement!:
 :imagesdir: ./images
 :source-highlighter: pygments
+:icons: font
+:icon-set: fa
+
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -10,21 +13,46 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::logo.png[Clause Logo]
-
-= Hackathon Frequently Asked Questions
-
-Welcome to the hackathon! http://clause.io[Clause] is here to help you have a great experience, build something amazing, learn and grow!
+= Clause Hackathon: Frequently Asked Questions
+Clause Inc <support@clause.io>
+v1.0, Feb 18, 2018: First version
 
 toc::[]
+
+image::logo.png[Clause Logo]
+
+[abstract]
+== Introduction
+
+Content (C) 2018 by Clause Inc.
+
+Welcome to the hackathon! http://clause.io[Clause] is here to help you have a great experience, build something amazing, learn and grow! By referring to the answers, tools and samples in this document you should be able to create a ((Smart Legal Contract)) and integrate it with existing systems. If you run into difficulties or have questions just ask us for help. We won't bite!
+
+== What can I do in the Hackathon?
+
+"If we desire respect for the law, we must first make the law respectable."
+-- Louis D. Brandeis
+
+* [x] Understand when to use ((Smart Legal Contracts))
+* [x] Create an account on Clause
+* [x] Create a new ((Smart Legal Contract))
+* [x] Execute a Smart Clause in response to an external ((trigger))
+* [x] Create a Smart Clause that performs an external ((action))
+* [x] Create a new ((Smart Clause Template))
+* [x] Add a Smart Clause Template to a ((Template Library))
 
 == What does Clause do? Why would I use it?
 
 Clause makes it easy for you to build parameterized legal contracts, parse them to extract machine-readable data, execute them as REST services, and connect them to external data sources.
 
-For example, you may have a Service Level Contract that specifies a percentage reduction in a customer's monthly bill, based on the availability of a service. The parameters for the contract are defined in a _Smart Clause Template_ and Clause can be used to automatically generate invoices (or move money!) based on IT monitoring events.
+For example, you may have a ((Service Level Contract)) that specifies a percentage reduction in a customer's monthly bill, based on the availability of a service. The parameters for the contract are defined in a ((Smart Clause Template)) and Clause can be used to automatically generate invoices (or move money!) based on IT monitoring events.
 
-TIP: Clause is completely generic and can be used to automate the contractual logic behind any business relationship. It makes it easy for you to map from natural language text to executable code.
+TIP: ((Clause)) is completely generic and can be used to automate the contractual logic behind any business relationship. It makes it easy for you to map from natural language text to executable code.
+
+[sidebar]
+****
+Smart Legal Contracts based on Smart Clauses solves major challenges for the legal industry, and for commerce generally. Traditional contracts are built by lawyers from natural language templates (often MS Word documents), using relatively unsophisticated find-and-replace of text. The terms in these contracts are then agreed between the contracting parties, the contract is signed, and then archived. In parallel the IT systems are built (or parameterized) to enforce or monitor the terms of the contract. The lack of integration and verification between the IT systems and contract management introduces inefficiencies and often leads to costly errors in contract compliance.
+****
 
 === Introductory video
 
@@ -34,7 +62,7 @@ image:https://img.youtube.com/vi/cmmq-JBMbbQ/0.jpg[link="http://www.youtube.com/
 
 https://www.accordproject.org[Accord Project] is an open foundation developing techno-legal standards and open-source software tools for the future of smart legal contracting. In particular it is developing the specification and code for Smart Clause Templates and an execution engine under the https://github.com/accordproject/cicero[Cicero project].
 
-TIP: Accord Project Cicero is licensed under the Apache-2 license making it easy to integrate with and use within your company.
+TIP: ((Accord Project)) ((Cicero)) is licensed under the Apache-2 license making it easy to integrate with and use within your company.
 
 If you would like to get involved with either the legal or technical side of the Accord Project please visit the http://accordproject.org[website] and sign up! Everyone is welcome and can contribute: ideas, documentation, testing, code, legal templates, models, translations, etc.
 
@@ -45,40 +73,41 @@ Clause Inc. technology is based on and extends the Cicero codebase. If you like 
 
 == What is the status of Clause?
 
-Clause is currently in closed beta (open to our friends and supporters). Don't worry, if you are attending a Hackathon where we are present we will give you access!
+((Clause)) is currently in closed beta (open to our friends and supporters). Don't worry, if you are attending a Hackathon where we are present we will give you access!
 
 == How do I integrate a Smart Legal Contract with my system?
 
-Clause exposes the Smart Clauses in contracts as RESTful services, that accept and produce JSON formatted data. Each Smart Clause in a Smart Legal Contract acts as a function, accepting data and returning values. To invoke a Smart Clause you have 3 options:
+Clause exposes the Smart Clauses in contracts as ((RESTful)) services, that accept and produce ((JSON)) formatted data. Each ((Smart Clause)) in a ((Smart Legal Contract)) acts as a function, accepting data and returning values. To invoke a ((Smart Clause)) you have 3 options:
 
-. Call a Clause RESTful service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
+. Call a Clause ((RESTful)) service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
 . Run a https://github.com/accordproject/cicero/tree/master/packages/cicero-server[Cicero Server] (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
 . Use the https://github.com/accordproject/cicero/tree/master/packages/cicero-engine[Cicero Engine] npm module, and embed execution into you Node.js application (most flexible, but template and clause management must be performed by the application)
 
-We recommend you start with option (1) as there is nothing to install or manage. Simply create a Smart Legal Contract in Clause, and then click the _Connections_ tab to see the Execution URL.
+We recommend you start with option (1) as there is nothing to install or manage. Simply create a ((Smart Legal Contract)) in ((Clause)), and then click the _Connections_ tab to see the Execution URL.
 
+.A Viewing Smart Clause Connections
 image::clause-connections.png[Smart Clause Connections]
 
 == Do you have sample client code I can look at and copy from?
 
-We have published the source code to the https://github.com/clauseHQ/fragile-goods-app[*Fragile Goods Demo*]. The demo uses the HTML5 accelerometer API to measure the g force and time taken to deliver a package. When the package is delivered the data is submitted to a Smart Legal Contract to calculate any penalties for late or clumsy package delivery.
+We have published the source code to the *Fragile Goods Demo*. The demo uses the ((HTML5)) accelerometer API to measure the g force and time taken to deliver a package. When the package is delivered the data is submitted to a ((Smart Legal Contract)) to calculate any penalties for late or clumsy package delivery.
 
 The demo illustrates how to:
 
-* Collect data from a device
-* Call the execution URL for a Smart Legal Contract running on Clause
-* Display the results of execution in a web user interface
+* [x] Collect data from a device
+* [x] Call the ((Execution URL)) for a ((Smart Legal Contract)) running on ((Clause))
+* [x] Display the results of execution in a web user interface
 
 == How can I create a Smart Legal Contract from existing Smart Clauses?
 
-To create a new Smart Legal Contract you must:
+To create a new ((Smart Legal Contract)) you must:
 
-. Request a Clause account. The Clause employee attending the Hackathon can help set this up for you.
+. Request a ((Clause)) account. The Clause employee attending the Hackathon can help set this up for you.
 . Confirm your email address
 . Login to Clause
 . Press the Templates menu at the top-right
-. Select the first Smart Clause Template that you would like to add to your contract
-. Review the Readme and the Sample Text for the Smart Clause
+. Select the first ((Smart Clause Template)) that you would like to add to your contract
+. Review the Readme and the Sample Text for the ((Smart Clause))
 . Press the "Create Contract" button to create a new contract that contains the Smart Clause
 . Using the contract editor you can customize your contract, replacing parameters with the values that you would like to use.
 . Save your changes
@@ -87,15 +116,15 @@ To create a new Smart Legal Contract you must:
 
 == How do I create a new Smart Clause Template?
 
-Creating a new Smart Clause Template essentially involves creating a directory structure with some files that conform to the Accord Project Template Specification.
+Creating a new ((Smart Clause Template)) essentially involves creating a directory structure with some files that conform to the ((Accord Project Template Specification)).
 
-Cicero includes some command-line tools and examples to make creating Smart Clause Templates easier.
+((Cicero)) includes some command-line tools and examples to make creating Smart Clause Templates easier.
 
-If you would like to create your own Smart Clause Template please refer to the Cicero documentation https://github.com/accordproject/cicero/blob/master/README.md[here].
+If you would like to create your own ((Smart Clause Template)) please refer to the ((Cicero)) documentation https://github.com/accordproject/cicero/blob/master/README.md[here].
 
 == How do I publish my Smart Clause Template so it shows up in Clause?
 
-Smart Clause Templates in Clause are managed in Template Libraries. By default Clause displays the templates in the Open Source Accord Project https://github.com/accordproject/cicero-template-library[template library], and the Clause template library. In addition you can add your own private template library to your organization using the Clause user interface.
+Smart Clause Templates in ((Clause)) are managed in ((Template Libraries)). By default Clause displays the templates in the Open Source Accord Project https://github.com/accordproject/cicero-template-library[template library], and the Clause template library. In addition you can add your own private template library to your organization using the Clause user interface.
 
 You are encouraged to fork the https://github.com/clauseHQ/sample-private-template-library[sample template library] as the basis for your own template library. You can then add your repository to your Clause account from the template page.
 
@@ -110,22 +139,22 @@ Please come talk to us at the Hackathon, or email support@clause.io.
 
 == Do you rate-limit execution requests?
 
-Yes, Clause uses an API Gateway to rate-limit execution requests. 
+Yes, Clause uses an ((API Gateway)) to rate-limit execution requests. 
 
 CAUTION: For high-volume/performance scenarios please contact us at support@clause.io.
 
 == What is the Clause pricing model?
 
-The Clause service is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service, pay-as-you-go pricing model.
+((Clause)) is currently in closed beta. We have not yet published pricing details, however we expect to use a fairly standard software-as-a-service, pay-as-you-go pricing model.
 
 == What does this have to do with blockchain?
 
-Clause integrates with blockchains in a variety of ways, to fulfill different scenarios:
+((Clause)) integrates with ((blockchain)) in a variety of ways, to fulfill different scenarios:
 
-. Contracts can be invoked from blockchains (passing data from the blockchain into the contract)
-. Contracts can submit transactions to blockchains
-. Contract execution can be embedded in a distributed blockchain node 
-. Contract logic can be compiled for execution on the blockchain
+. Smart Legal Contracts can be invoked from blockchains (passing data from the blockchain into the contract)
+. Smart Legal Contracts can submit transactions to blockchains
+. ((Smart Legal Contract)) execution can be embedded in a distributed ((blockchain)) node 
+. Smart Legal Contract logic can be compiled for execution on the blockchain
 
 (1) is illustrated by the https://github.com/accordproject/cicero-perishable-network[Cicero Perishable Goods Demo], which invokes an out-of-process Cicero Engine (or Clause) from https://hyperledger.github.io/composer/[Hyperledger Composer].
 
@@ -135,23 +164,26 @@ Clause integrates with blockchains in a variety of ways, to fulfill different sc
 
 (4) is currently under development.
 
-== What connectors do you support
+== What connectors do you support?
 
-We are adding connectors at a rapid rate, so this list is not exhaustive! Here is a flavour of the types of things you can do from your Smart Legal Contracts:
+We are adding ((connectors)) at a rapid rate, so this list is not exhaustive! Here is a flavour of the types of things you can do from your Smart Legal Contracts:
 
-*Triggers*, inbound requests to Clause from the outside world.
+* Execute ((Smart Clauses)) via authenticated ((REST)) services
+* ((POST)) data to external REST services (web hooks)
+* Transfer ((Ether)) between ((Ethereum)) accounts
+* Invoke ((Zapier))
+* Invoke ((Xero)) accounting
 
-* Execute Smart Clauses via authenticated REST services
-** You can form more complex integrations by orchestrating a call to the Clause API with other services using https://nodered.org/[Node-RED] to quickly wire to the IoT, for example.
+<<<
+[glossary]
+== Glossary
 
-*Actions*, cause side-effects in the world with an outbound integration.
+((Smart Legal Contract)):: A natural language legal contract that is composed of a set of Smart Clauses.
+((Smart Clause)):: Typically a paragraph of natural language text that has precise execution semantics and that can contain parameters. The (((Smart Clause)) has associated executable code (logic) that a computer can execute.
+((Trigger)):: An external event or transaction that causes a Smart Contract to be executed.
+((Action)):: A Smart Clause can cause actions to occur in external systems via connectors.
+((Blockchain)):: Blockchain refers to a type of data structure that enables identifying and tracking transactions digitally and sharing this information across a distributed network of computers.
 
-* POST data to external REST services (web hooks). https://github.com/clauseHQ/clause-template-library/tree/master/integration-httppost[Example]
-** This connector can be used to connect to many other online services through https://zapier.com[Zapier].
-** The https://github.com/clauseHQ/clause-template-library/tree/master/integration-httppost[sample] provides instructions for Google Sheets, but this can be easily extended to others such as:
-*** Clio, for Legal Practice management
-*** Xero, for accounting. E.g. your contract could automatically create an invoice.
-*** Slack, for notifications. Why not send an alert announcing the outcome of your contract? 
-* Transfer Ether between Ethereum accounts. https://github.com/clauseHQ/clause-template-library/tree/master/integration-ethereumtransfer[Example]
-
-
+<<<
+[index]
+== Index

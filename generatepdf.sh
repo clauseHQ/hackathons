@@ -1,0 +1,1 @@
+asciidoctor-pdf README.adoc -a allow-uri-read
