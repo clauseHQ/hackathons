@@ -90,7 +90,7 @@ image::clause-connections.png[Smart Clause Connections]
 
 == Do you have sample client code I can look at and copy from?
 
-We have published the source code to the *Fragile Goods Demo*. The demo uses the ((HTML5)) accelerometer API to measure the g force and time taken to deliver a package. When the package is delivered the data is submitted to a ((Smart Legal Contract)) to calculate any penalties for late or clumsy package delivery.
+We have published the source code to the https://github.com/clauseHQ/fragile-goods-app[*Fragile Goods Demo*]. The demo uses the HTML5 accelerometer API to measure the g force and time taken to deliver a package. When the package is delivered the data is submitted to a Smart Legal Contract to calculate any penalties for late or clumsy package delivery.
 
 The demo illustrates how to:
 
@@ -168,22 +168,19 @@ CAUTION: For high-volume/performance scenarios please contact us at support@clau
 
 We are adding ((connectors)) at a rapid rate, so this list is not exhaustive! Here is a flavour of the types of things you can do from your Smart Legal Contracts:
 
-* Execute ((Smart Clauses)) via authenticated ((REST)) services
-* ((POST)) data to external REST services (web hooks)
-* Transfer ((Ether)) between ((Ethereum)) accounts
-* Invoke ((Zapier))
-* Invoke ((Xero)) accounting
+*Triggers*, inbound requests to Clause from the outside world.
 
-<<<
-[glossary]
-== Glossary
+* Execute Smart Clauses via authenticated REST services
+** You can form more complex integrations by orchestrating a call to the Clause API with other services using https://nodered.org/[Node-RED] to quickly wire to the IoT, for example.
 
-((Smart Legal Contract)):: A natural language legal contract that is composed of a set of Smart Clauses.
-((Smart Clause)):: Typically a paragraph of natural language text that has precise execution semantics and that can contain parameters. The (((Smart Clause)) has associated executable code (logic) that a computer can execute.
-((Trigger)):: An external event or transaction that causes a Smart Contract to be executed.
-((Action)):: A Smart Clause can cause actions to occur in external systems via connectors.
-((Blockchain)):: Blockchain refers to a type of data structure that enables identifying and tracking transactions digitally and sharing this information across a distributed network of computers.
+*Actions*, cause side-effects in the world with an outbound integration.
 
-<<<
-[index]
-== Index
+* POST data to external REST services (web hooks). https://github.com/clauseHQ/clause-template-library/tree/master/integration-httppost[Example]
+** This connector can be used to connect to many other online services through https://zapier.com[Zapier].
+** The https://github.com/clauseHQ/clause-template-library/tree/master/integration-httppost[sample] provides instructions for Google Sheets, but this can be easily extended to others such as:
+*** Clio, for Legal Practice management
+*** Xero, for accounting. E.g. your contract could automatically create an invoice.
+*** Slack, for notifications. Why not send an alert announcing the outcome of your contract? 
+* Transfer Ether between Ethereum accounts. https://github.com/clauseHQ/clause-template-library/tree/master/integration-ethereumtransfer[Example]
+
+
