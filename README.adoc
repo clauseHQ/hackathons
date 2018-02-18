@@ -59,29 +59,31 @@ We recommend you start with option (1) as there is nothing to install or manage.
 
 image::clause-connections.png[Smart Clause Connections]
 
-== Do you have sample code I can look at and copy from?
+== Do you have sample client code I can look at and copy from?
 
-TDB
+We have published the source code to the *Fragile Goods Demo*. The demo uses the HTML5 accelerometer API to measure the g force and time taken to deliver a package. When the package is delivered the data is submitted to a Smart Legal Contract to calculate any penalties for late or clumsy package delivery.
 
-....
-Sample code block
-....
+The demo illustrates how to:
 
-.foo.js
-[source,javascript]
-----
-const foo = require('foo') // <1>
-
-const x = foo(2); // <2>
-console.log( 'Hello World!' + x); // <3>
-----
-<1> Library import
-<2> Method call
-<3> Logging
+* Collect data from a device
+* Call the execution URL for a Smart Legal Contract running on Clause
+* Display the results of execution in a web user interface
 
 == How can I create a Smart Legal Contract from existing Smart Clauses?
 
-TDB
+To create a new Smart Legal Contract you must:
+
+. Request a Clause account. The Clause employee attending the Hackathon can help set this up for you.
+. Confirm your email address
+. Login to Clause
+. Press the Templates menu at the top-right
+. Select the first Smart Clause Template that you would like to add to your contract
+. Review the Readme and the Sample Text for the Smart Clause
+. Press the "Create Contract" button to create a new contract that contains the Smart Clause
+. Using the contract editor you can customize your contract, replacing parameters with the values that you would like to use.
+. Save your changes
+. Press the "Connections" tab to view the Execution URL for your Smart Clause
+. Congratulations, you can now invoke your Smart Clause!
 
 == How do I create a new Smart Clause Template?
 
