@@ -24,9 +24,9 @@ image::logo.png[Clause Logo]
 [abstract]
 == Introduction
 
-Content (C) 2018 by Clause Inc.
-
 Welcome to the hackathon! http://clause.io[Clause] is here to help you have a great experience, build something amazing, learn and grow! By referring to the answers, tools and samples in this document you should be able to create a ((Smart Legal Contract)) and integrate it with existing systems. If you run into difficulties or have questions just ask us for help. We won't bite!
+
+(C) 2018 Clause, Inc.
 
 == What can I do in the Hackathon?
 
@@ -71,13 +71,17 @@ If you would like to get involved with either the legal or technical side of the
 Clause Inc. technology is based on and extends the Cicero codebase. If you like analogies, think of the Open Source Git codebase vs. the commercial GitHub service.
 ====
 
+== What is a Smart Clause?
+
+A Smart Clause is a constituent element of a smart contract. Instead of having to make a full contract executable or 'smart', a user can simply add programmable Smart Clauses to new or existing legal contracts to perform various functionalities. For example, a 'delivery' Smart Clause and a 'payment' Smart Clause may be added to an existing supply contract template. This easily enables legal contracts to be made programmable and executable. 
+
 == What is the status of Clause?
 
 ((Clause)) is currently in closed beta (open to our friends and supporters). Don't worry, if you are attending a Hackathon where we are present we will give you access!
 
 == How do I integrate a Smart Legal Contract with my system?
 
-Clause exposes the Smart Clauses in contracts as ((RESTful)) services, that accept and produce ((JSON)) formatted data. Each ((Smart Clause)) in a ((Smart Legal Contract)) acts as a function, accepting data and returning values. To invoke a ((Smart Clause)) you have 3 options:
+Clause exposes Smart Clauses in contracts as ((RESTful)) services, that accept and produce ((JSON)) formatted data. Each ((Smart Clause)) in a ((Smart Legal Contract)) acts as a function, accepting data and returning values. To invoke a ((Smart Clause)) you have 3 options:
 
 . Call a Clause ((RESTful)) service, automatically exposed for each Smart Clause in a contract (cross-platform, easiest, requires an Internet connection to Clause)
 . Run a https://github.com/accordproject/cicero/tree/master/packages/cicero-server[Cicero Server] (cross-platform, can run locally, but resources are managed on the file-system, with limited scalability)
