@@ -1,0 +1,128 @@
+:toc:
+:toc-placement!:
+:imagesdir: ./images
+:source-highlighter: pygments
+:icons: font
+:icon-set: fa
+:sectnums:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+= Clause: Quick Start
+Clause Inc <support@clause.io>
+v1.0, Feb 19, 2018: First version
+
+toc::[]
+
+image::logo.png[Clause Logo]
+
+[abstract]
+== Introduction
+
+This document will help you to quickly start creating **Smart Legal Contracts** with http://clause.io[Clause], built on Open Source technology from the http://accordproject.org[Accord Project].
+
+(C) 2018 Clause, Inc.
+
+== Create an Account on Clause
+
+Clause is currently in closed beta. To request an account please request access by emailing support@clause.io.
+
+== Confirm Email Address
+
+Once your account has been created you will receive an email. Click the link in the email to confirm your email address and to agree to the Terms and Conditions of use.
+
+== Login
+
+To login to Clause with your email and password visit: https://hub.clause.io
+
+== Create a Fragile Goods Contract
+
+Click the Templates tab at the top of the screen and then click on the "Fragile Goods" template, then press the "Create Contract" button.
+
+== Edit the Contract
+
+Edit the name of the contract by pressing the pencil icon to the left of the default contract name ("fragile-goods").
+
+Edit the parameters in the contract by editing the text in the contract editor. For the fragile goods template the editable parameters are highlighted below.
+
+====
+6.1.7 Liquidated Damages for Delayed Delivery. 
+In the event the EXW delivery date of the Equipment is delayed beyond the delivery schedule as indicated in Annex A, solely through the fault of the Seller, and unless the parties mutually agreed to an extension thereto, the Buyer is entitled to claim liquidated damages in an amount equivalent to $**200.00**. 
+Prior to implementing the provisions of Article 16.4 pursuant to this section, Buyer agrees that it shall discuss with Seller alternate remedies in good faith.. . . . 
+
+7.1 The Equipment to be shipped to the Buyer shall be packed and shipped in accordance with the Specifications and if not specified therein.... 
+Additionally the Equipment should have proper devices on it to record any shock during transportation as any instance of acceleration outside the bounds of **-0.5**g and **0.5**g. 
+Each shock shall reduce the Contract Price by $**5.00**. Packing containing fragile materials should be so marked in bold stout letters. . . . .
+
+ANNEX A
+Equipment Description, Contract Price and Delivery Schedule
+
+Contract Price is $**1000.00** per unit of Equipment.
+Delivery Schedule: no later than **10** seconds after initiation.
+====
+
+Note that as you edit the contract it is validated against the natural language of the template and the JSON data structure used for execution is updated to the right of the editor, as shown below:
+
+[source,json]
+----
+{
+  "$class": "io.clause.demo.fragileGoods.TemplateModel",
+  "deliveryPrice": 1000,
+  "accelerationMin": -0.5,
+  "accelerationMax": 0.5,
+  "accelerationBreachPenalty": 5,
+  "deliveryLimitDuration": {
+    "$class": "io.clause.demo.fragileGoods.Duration",
+    "amount": 10,
+    "unit": "seconds"
+  },
+  "lateDeliveryPenalty": 200
+}
+----
+
+== View the Contract as PDF
+
+Press the "View PDF" button to view the contract text as a PDF.
+
+== Copy the Execution URL
+
+Press the "Connections" tab to see the Execution URL for the Smart Clause. Copy it to the clipboard.
+
+== Invoke the Contract from a Web UI
+
+Go to Fragile Goods Package Simulator web user interface here: https://clause-fragile-goods-app.netlify.com
+
+Paste your Execution URL from the clipboard into the Execution URL text field.
+
+Press the "Start" button and wait for the counter to turn negative (greater than the time allocated for package delivery).
+
+Press the "Finish" button. The user interface should display that the cost is $800 (price of package minus the late penalty).
+
+NOTE: If you run the demo on a device with an HTML5 compatible accelerometer, such as an iPhone or Android phone, then the g-forces collected during package delivery will also be used to calcualte penalties.
+
+The source code for the demo app is here: https://github.com/clauseHQ/fragile-goods-app
+
+== Invoke the Smart Clause using cURL
+
+You can invoke the Smart Clause using cURL, or any GUI tool or library that you like to use to interact with REST APIs. Simply enter your Execution URL and supply the JSON payload in the request body.
+
+For example, open a Terminal and execute the command:
+
+[source,bash]
+----
+curl -H "Content-Type: application/json" -X POST -d '{ "$class": "io.clause.demo.fragileGoods.DeliveryUpdate", "startTime":"January 1, 2018 16:34:00", "finishTime":"January 1, 2018 16:34:11", "status":"ARRIVED", "accelerometerReadings":[0.2,0.6,-0.3,-0.7,0.1]}' https://api.clause.io/api/clauses/<contractId>/execute?access_token=<token>
+----
+
+== Next Steps
+
+Congratulations! You have completed the Quick Start. Here's where to go next:
+
+. Read the https://github.com/clauseHQ/hackathons/[Frequently Asked Questions]
+. Join the http://accordproject.org[Accord Project]
+. Integrate Smart Legal Contract execution with https://github.com/accordproject/cicero-perishable-network[a blockchain]

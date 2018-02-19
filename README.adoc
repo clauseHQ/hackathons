@@ -30,8 +30,8 @@ Welcome to the hackathon! http://clause.io[Clause] is here to help you have a gr
 
 == What can I do in the Hackathon?
 
-"If we desire respect for the law, we must first make the law respectable."
--- Louis D. Brandeis
+"I am not ashamed to confess that I am ignorant of what I do not know."
+-- Marcus Tullius Cicero
 
 * [x] Understand when to use ((Smart Legal Contracts))
 * [x] Create an account on Clause
